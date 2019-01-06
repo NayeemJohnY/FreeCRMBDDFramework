@@ -1,4 +1,4 @@
-package com.StepDefinition;
+/*package com.StepDefinition;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -37,14 +37,14 @@ public class LoginStepDefinition {
 	@Then("^User enters \"(.*)\" and \"(.*)\"$")
 	public void user_enters_username_and_password(String username, String password)  {
 	    // Write code here that turns the phrase above into concrete actions
-		/*WebDriverWait wait= new WebDriverWait(driver,70);
+		WebDriverWait wait= new WebDriverWait(driver,70);
 		WebElement frameChatPopup=driver.findElement(By.xpath("//iframe[contains(@name, 'intercom-borderless-frame')]"));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameChatPopup));
 		Actions action= new Actions (driver);
 		WebElement chatPopup=driver.findElement(By.xpath("//span[text()='Cogmento']"));
 		WebElement btnclosePopup=driver.findElement(By.xpath("//*[@role='button']"));
 		action.moveToElement(chatPopup).build().perform();
-	  	btnclosePopup.click();*/
+	  	btnclosePopup.click();
 		driver.findElement(By.name("username")).sendKeys(username);
 		driver.findElement(By.xpath("//*[@type='password']")).sendKeys(password);
 	   
@@ -95,3 +95,4 @@ public class LoginStepDefinition {
 		BtnSave.click();
 }
 }
+*/

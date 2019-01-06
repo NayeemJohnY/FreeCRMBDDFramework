@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="0">
-<testcase classname="FreeCRM Login &amp; Contact Feature" name="FreeCRM Login Test Scenario" time="0">
-<system-out><![CDATA[Given User is already is login Page.........................................skipped
-When Page Title is FreeCRM..................................................skipped
-Then User enters "Nayeemjohn" and "Vino@1702"...............................skipped
-Then User clicks on Login Button............................................skipped
-And User is on HomePage.....................................................skipped
-And Click on the New Contact................................................skipped
-And User enters contact"Sabarish" "Elango" and "zoho".......................skipped
-And Close the Browser.......................................................skipped
-]]></system-out>
-</testcase>
-<testcase classname="FreeCRM Login &amp; Contact Feature" name="FreeCRM Login Test Scenario 2" time="0">
-<system-out><![CDATA[Given User is already is login Page.........................................skipped
-When Page Title is FreeCRM..................................................skipped
-Then User enters "Nayeemjohn" and "Vino@1702"...............................skipped
-Then User clicks on Login Button............................................skipped
-And User is on HomePage.....................................................skipped
-And Click on the New Contact................................................skipped
-And User enters contact"Logesh" "Palanivel" and "Cognizant".................skipped
-And Close the Browser.......................................................skipped
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="169.533344">
+<testcase classname="FreeCRM Deals Data Feature" name="FreeCRM Deal Test Scenario" time="169.533344">
+<system-out><![CDATA[Given User is already is login Page.........................................passed
+When Page Title is FreeCRM..................................................passed
+Then User enters username and password......................................passed
+Then User clicks on Login Button............................................passed
+And User is on HomePage.....................................................passed
+And User moves to Deals Page................................................passed
+And User enters deals details...............................................passed
+And Close the Browser.......................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
