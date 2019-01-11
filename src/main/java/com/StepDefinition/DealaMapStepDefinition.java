@@ -1,6 +1,7 @@
-package com.StepDefinition;
+/*package com.StepDefinition;
 
 import java.util.List;
+import java.util.Map;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -14,9 +15,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class DealsStepDefinition {
-	
-	/*WebDriver driver;
+public class DealaMapStepDefinition {
+WebDriver driver;
 	
 	@Given("^User is already is login Page$")
 	public void user_is_already_is_login_Page()  {
@@ -41,9 +41,11 @@ public class DealsStepDefinition {
 	    // For automatic transformation, change DataTable to one of
 	    // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
 	    // E,K,V must be a scalar (String, Integer, Date, enum etc)
-		List <List<String>>data =credentials.raw();
-		driver.findElement(By.name("username")).sendKeys(data.get(0).get(0));
-		driver.findElement(By.xpath("//*[@type='password']")).sendKeys(data.get(0).get(1));
+		for (Map<String,String>data :credentials.asMaps(String.class, String.class))
+		{
+		driver.findElement(By.name("username")).sendKeys(data.get("username"));
+		driver.findElement(By.xpath("//*[@type='password']")).sendKeys(data.get("password"));
+		}
 	  
 	}
 	@Then("^User clicks on Login Button$")
@@ -77,16 +79,27 @@ public class DealsStepDefinition {
 	    // For automatic transformation, change DataTable to one of
 	    // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
 	    // E,K,V must be a scalar (String, Integer, Date, enum etc)
-		List <List<String>>dealData =Deals.raw();
-		driver.findElement(By.xpath("//*[@id='title']")).sendKeys(dealData.get(0).get(0));
-		driver.findElement(By.xpath("//input[@name='amount']")).sendKeys(dealData.get(0).get(1));
-		driver.findElement(By.id("probability")).sendKeys(dealData.get(0).get(2));
-		driver.findElement(By.id("commission")).sendKeys(dealData.get(0).get(3));
+		for(Map <String,String> dealData :Deals.asMaps(String.class, String.class))
+				{
+		driver.findElement(By.xpath("//*[@id='title']")).sendKeys(dealData.get("title"));
+		driver.findElement(By.xpath("//input[@name='amount']")).sendKeys(dealData.get("amount"));
+		driver.findElement(By.id("probability")).sendKeys(dealData.get("probability"));
+		driver.findElement(By.id("commission")).sendKeys(dealData.get("commission"));
+		driver.findElement(By.xpath("//*[@value='Save']")).click();
+		WebElement linkDeal=driver.findElement(By.xpath("//a[contains(text(),'Deals')]"));
+		WebElement linkNewDeal=driver.findElement(By.xpath("//a[contains(text(),'New Deal')]"));
+		Actions action= new Actions(driver);
+		action.moveToElement(linkDeal).build().perform();
+		linkNewDeal.click();
+		
+				}
+		
 	}
 	@Then("^Close the Browser$")
 	public void close_the_Browser() {
 	    // Write code here that turns the phrase above into concrete actions
 		driver.quit();
 	}
-	*/
+	
 }
+*/
